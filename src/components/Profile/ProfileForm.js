@@ -1,12 +1,13 @@
-import { eachSeries } from "async";
 import { useContext, useRef } from "react";
 import AuthContext from "../../store/auth-context";
 import classes from "./ProfileForm.module.css";
 import { UPDATE_PASSWORD_KEY } from "../../utils/token";
+import { useHistory } from "react-router-dom";
 
 const ProfileForm = () => {
-  const newPasswordInputRef = useRef();
+  const history = useHistory();
 
+  const newPasswordInputRef = useRef();
   const authContext = useContext(AuthContext);
 
   const submitHandler = (event) => {
@@ -24,11 +25,13 @@ const ProfileForm = () => {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((res) => {});
+    }).then((res) => {
+      history.replace("/");
+    });
   };
 
   return (
-    <form className={classes.form} onClick={submitHandler}>
+    <form className={classes.form} onSubmit={submitHandler}>
       <div className={classes.control}>
         <label htmlFor="new-password">New Password</label>
         <input
