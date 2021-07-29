@@ -1,4 +1,3 @@
-// Testing
 export const UPDATE_PASSWORD_KEY =
   "https://identitytoolkit.googleapis.com/v1/accounts:update?key=[API_KEY]";
 
