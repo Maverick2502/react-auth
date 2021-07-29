@@ -1,7 +1,7 @@
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../../store/auth-context.jsx";
 import classes from "./AuthForm.module.css";
-import { SIGN_IN_KEY, SIGN_UP_KEY } from "../../Utils/token";
+import { SIGN_IN_KEY, SIGN_UP_KEY } from "../../utils/token";
 
 const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);

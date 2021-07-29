@@ -2,7 +2,7 @@ import { eachSeries } from "async";
 import { useContext, useRef } from "react";
 import AuthContext from "../../store/auth-context";
 import classes from "./ProfileForm.module.css";
-import { UPDATE_PASSWORD_KEY } from "../../Utils/token";
+import { UPDATE_PASSWORD_KEY } from "../../utils/token";
 
 const ProfileForm = () => {
   const newPasswordInputRef = useRef();
